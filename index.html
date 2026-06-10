@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Louis Whittome — Electrical &amp; Electronic Engineer</title>
+<meta name="description" content="Louis Whittome — Final-year BEng Electrical and Electronic Engineering student at the University of Warwick.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f6f8fa;
+    --text: #1a2332;
+    --text-light: #5a6b7d;
+    --accent: #0a6e8a;
+    --accent-light: #e3f1f5;
+    --border: #e4e9ee;
+    --max: 880px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.65;
+  }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  nav .logo { font-weight: 700; letter-spacing: .02em; color: var(--text); text-decoration: none; }
+  nav .links a {
+    color: var(--text-light); text-decoration: none; font-size: .92rem; margin-left: 22px;
+  }
+  nav .links a:hover { color: var(--accent); }
+  @media (max-width: 640px) { nav .links a { margin-left: 14px; font-size: .84rem; } }
+
+  /* Hero */
+  header { padding: 88px 0 72px; }
+  header h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin-bottom: 14px; }
+  header .tagline { font-size: 1.15rem; color: var(--text-light); max-width: 620px; margin-bottom: 26px; }
+  .accent { color: var(--accent); }
+  .btns a {
+    display: inline-block; text-decoration: none; font-size: .95rem; font-weight: 600;
+    padding: 10px 22px; border-radius: 6px; margin-right: 12px; margin-bottom: 10px;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #08596f; }
+  .btn-outline { border: 1.5px solid var(--accent); color: var(--accent); }
+  .btn-outline:hover { background: var(--accent-light); }
+
+  /* Sections */
+  section { padding: 56px 0; border-top: 1px solid var(--border); }
+  section.alt { background: var(--bg-alt); }
+  h2 {
+    font-size: 1.5rem; margin-bottom: 28px; display: flex; align-items: center; gap: 12px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+  h3 { font-size: 1.05rem; }
+  p  { margin-bottom: 14px; }
+
+  /* Cards / entries */
+  .entry { margin-bottom: 30px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; margin-bottom: 6px; }
+  .entry-head .where { color: var(--text-light); font-weight: 500; }
+  .entry-head .when  { color: var(--text-light); font-size: .9rem; white-space: nowrap; }
+  .entry p { color: var(--text); margin-bottom: 0; }
+
+  /* Module grid */
+  .yr { margin-bottom: 26px; }
+  .yr:last-child { margin-bottom: 0; }
+  .yr h3 { margin-bottom: 12px; color: var(--accent); }
+  .modgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+  .mod {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+    padding: 10px 14px; font-size: .92rem;
+  }
+  section.alt .mod { background: #fff; }
+
+  /* Skills */
+  .skillgroups { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  .skillgroup h3 { margin-bottom: 10px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    background: var(--accent-light); color: var(--accent); border-radius: 99px;
+    padding: 4px 14px; font-size: .87rem; font-weight: 500;
+  }
+
+  /* Education */
+  .grades { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .grade {
+    border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px;
+    font-size: .88rem; background: #fff;
+  }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-light); font-size: .9rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Louis Whittome</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#modules">Modules</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <h1>Louis Whittome<br><span class="accent">Electrical &amp; Electronic Engineering</span></h1>
+    <p class="tagline">Final-year BEng student at the University of Warwick with First-Class grades to date, passionate about electronics hardware, embedded systems, and energy technologies.</p>
+    <div class="btns">
+      <a class="btn-primary" href="mailto:louis@l.whitto.me">Get in touch</a>
+      <a class="btn-outline" href="https://www.linkedin.com/in/louis-whittome-75506a24b" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn-outline" href="Louis-Whittome-CV.pdf" download>Download CV</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="alt">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>I'm a final-year Electrical and Electronic Engineering student at the University of Warwick, graduating in June 2026. I've achieved First-Class grades across my degree so far and I'm driven by a passion for developing innovative hardware and energy systems — from soldering and testing PCBs in industry to characterising MEMS gas sensors in my final-year project.</p>
+    <p>I'm motivated to apply my technical skills to real-world challenges across electronics, renewable energy, and emerging technologies, and I bring hands-on experience of both the electronic and mechanical sides of engineering.</p>
+    <p>Outside engineering, I'm a scholarship athlete at Warwick and a qualified RYA watersports instructor — experiences that have built the discipline, leadership, and communication skills I bring to every team I work in.</p>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>BEng Electrical and Electronic Engineering</h3>
+        <span class="when">2023 – 2026 (expected)</span>
+      </div>
+      <div class="entry-head"><span class="where">University of Warwick</span></div>
+      <p>First-Class grades to date. Final-year individual project on MEMS thermal conductivity gas sensing, supervised by Prof. Julian Gardner. Scholarship athlete alongside full-time study.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>A-Levels — Colyton Grammar School, Devon</h3>
+      </div>
+      <div class="grades">
+        <span class="grade">Mathematics — A*</span>
+        <span class="grade">Further Mathematics — A*</span>
+        <span class="grade">Physics — A*</span>
+        <span class="grade">Chemistry — A*</span>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>GCSEs — The Woodroffe School, Lyme Regis</h3>
+      </div>
+      <p>Eleven GCSEs including five grade 9s and five grade 8s, with 9s in Mathematics, Biology, and Chemistry.</p>
+    </div>
+  </div>
+</section>
+
+<section id="modules" class="alt">
+  <div class="wrap">
+    <h2>Degree Modules</h2>
+    <div class="yr">
+      <h3>Year 1 — General Engineering Foundation</h3>
+      <div class="modgrid">
+        <div class="mod">Engineering Mathematics</div>
+        <div class="mod">Electrical &amp; Electronic Circuits</div>
+        <div class="mod">Dynamics &amp; Thermodynamics</div>
+        <div class="mod">Materials for Engineering</div>
+        <div class="mod">Engineering Design</div>
+        <div class="mod">Modelling, Simulation &amp; Computation</div>
+      </div>
+    </div>
+    <div class="yr">
+      <h3>Years 2 &amp; 3 — Electrical &amp; Electronic Specialisation</h3>
+      <div class="modgrid">
+        <div class="mod">Analogue Electronics Design</div>
+        <div class="mod">Power Electronics</div>
+        <div class="mod">Embedded Systems</div>
+        <div class="mod">Computer Architecture &amp; Systems</div>
+        <div class="mod">Semiconductor Materials &amp; Devices</div>
+        <div class="mod">Control Engineering</div>
+        <div class="mod">Electromechanical Systems</div>
+        <div class="mod">Individual Project — Embedded Control &amp; Energy Systems</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Final-Year Project — MEMS Gas Sensing for Methane &amp; Hydrogen Detection</h3>
+        <span class="when">2025 – 2026</span>
+      </div>
+      <div class="entry-head"><span class="where">University of Warwick · Supervised by Prof. Julian Gardner · In partnership with Flusso Ltd</span></div>
+      <p>An investigation into thermal conductivity sensor technology for detecting trace methane and hydrogen mixtures in air (0–1.2% Vol) — gases central to industrial safety, emissions tracking, and the UK's hydrogen-grid ambitions. Evaluated a MEMS thermal conductivity sensor based on the Flusso FLS310 IC, building a complete experimental platform: a custom PCB with differential amplification, a controlled gas-flow rig, and Arduino-based data acquisition over I²C.</p>
+      <p style="margin-top:10px;">Characterised sensor response across humidity and ambient temperature profiles, applied signal processing and data smoothing, and developed a localised multi-variable linear regression model compensating for environmental factors — achieving R² = 0.969 with an RMSE of 0.165 Ω, demonstrating proof of concept for a low-cost alternative to optical and electrochemical sensors.</p>
+      <div class="tags" style="margin-top:14px;">
+        <span class="tag">MEMS Sensors</span>
+        <span class="tag">PCB Design</span>
+        <span class="tag">Embedded C / Arduino</span>
+        <span class="tag">I²C</span>
+        <span class="tag">Signal Processing</span>
+        <span class="tag">Regression Modelling</span>
+      </div>
+      <div class="btns" style="margin-top:18px;">
+        <a class="btn-outline" href="Louis-Whittome-Dissertation.pdf" target="_blank" rel="noopener">Read the full report (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="alt">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Assistant Electronics Engineer</h3>
+        <span class="when">Aug 2024</span>
+      </div>
+      <div class="entry-head"><span class="where">EDM Solutions Ltd — Manchester</span></div>
+      <p>Contributed to the full production of flight simulator handsets for Air India. Soldered and assembled PCBs interfaced with Raspberry Pi systems, calibrated embedded code with the software team, and performed functionality testing. Gained direct insight into hardware–software integration and the design workflow of professional simulation equipment.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Assistant Engineer</h3>
+        <span class="when">Sept 2022</span>
+      </div>
+      <div class="entry-head"><span class="where">PDQ Precision Ltd — Yeovil</span></div>
+      <p>Assisted in precision component manufacturing using CNC lathe and milling machines. Worked on CAD-based part design, tolerancing, and materials selection, building a strong understanding of design for manufacture and the mechanical–electrical interface.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Water Sports Instructor</h3>
+        <span class="when">Jun – Sept 2023</span>
+      </div>
+      <div class="entry-head"><span class="where">Mark Warner — Rhodes, Greece</span></div>
+      <p>Led RYA-certified sailing and windsurfing courses for children and adults, managing safety-critical activities daily. Strengthened communication, leadership, and public-speaking skills through weekly presentations to guests.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Kitchen Hand</h3>
+        <span class="when">Dec 2022 – Apr 2023</span>
+      </div>
+      <div class="entry-head"><span class="where">The Alpinist — Niseko, Japan</span></div>
+      <p>Worked in a high-end restaurant serving up to one hundred three-course meals nightly, developing resilience, teamwork, and efficiency under sustained pressure.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Technical Skills</h2>
+    <div class="skillgroups">
+      <div class="skillgroup">
+        <h3>Programming</h3>
+        <div class="tags">
+          <span class="tag">C</span>
+          <span class="tag">Python</span>
+          <span class="tag">MATLAB</span>
+          <span class="tag">Verilog</span>
+          <span class="tag">Assembly</span>
+          <span class="tag">Arduino IDE</span>
+        </div>
+      </div>
+      <div class="skillgroup">
+        <h3>Hardware &amp; Electronics</h3>
+        <div class="tags">
+          <span class="tag">Microcontrollers</span>
+          <span class="tag">PCB Design</span>
+          <span class="tag">Soldering &amp; Assembly</span>
+          <span class="tag">Electronic Instrumentation</span>
+          <span class="tag">Embedded Systems</span>
+        </div>
+      </div>
+      <div class="skillgroup">
+        <h3>Design &amp; Tools</h3>
+        <div class="tags">
+          <span class="tag">Fusion 360</span>
+          <span class="tag">Motion &amp; Stress Simulation</span>
+          <span class="tag">CNC Machining (exposure)</span>
+          <span class="tag">Microsoft Excel / Word / PowerPoint</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>I'm currently exploring graduate opportunities across electrical and electronic engineering. If you'd like to get in touch, I'd love to hear from you.</p>
+    <div class="btns">
+      <a class="btn-primary" href="mailto:louis@l.whitto.me">louis@l.whitto.me</a>
+      <a class="btn-outline" href="https://www.linkedin.com/in/louis-whittome-75506a24b" target="_blank" rel="noopener">LinkedIn Profile</a>
+      <a class="btn-outline" href="Louis-Whittome-CV.pdf" download>Download CV (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 Louis Whittome · Built for my engineering portfolio · <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+</body>
+</html>
